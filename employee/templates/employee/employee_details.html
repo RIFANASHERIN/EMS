@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+
+Name: {{ employees.first_name }} {{ employees.last_name}} <br>
+Age: {{ employees.age }}<br>
+post: {{ employees.post }}
+<br>
+<hr>
+<a href="{% url 'employee:employee-list' %}"> Go back to Employees </a><hr>
+<a href="{% url 'employee:employee-update' employees.pk %}"> Update </a><br>
+<a href="{% url 'employee:employee-delete' employees.pk %}"> Delete </a>
+
+{% endblock content %}
